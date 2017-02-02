@@ -15,6 +15,8 @@ namespace Number_to_Word_Count
 
             int min = 0;
             int max = 0;
+            int count = 0;
+
             Console.WriteLine("Min: ");
             min = int.Parse(Console.ReadLine());
 
@@ -31,12 +33,18 @@ namespace Number_to_Word_Count
              foreach (var item in numberList)
                 {
                 string nextWord = words.Convert(item);
+
+                count += nextWord.Length;
                 
-                word += nextWord;
+                //word += nextWord;
 
                 }
 
-            Console.Write($"NtLC: {word.Length}");
+
+
+            Console.WriteLine(count);
+
+           // Console.Write($"NtLC: {word.Length}");
 
             Console.ReadKey();
 
